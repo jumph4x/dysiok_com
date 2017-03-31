@@ -6,7 +6,7 @@
 <div class="top-bar" id="main-nav" data-animate="hinge-in-from-top spin-out">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
-      <li><a href="/">Photography by Dysiok</a></li>
+      <li><a href="/" title="Photography by Dysiok">Dysiok</a></li>
       <%- Spree::Taxonomy.first.root.children.each do |child| -%>
       <li>
         <a href="/t/<%= child.permalink-%>"><%= child.name -%></a>

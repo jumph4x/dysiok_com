@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Regen images: `bundle exec rake paperclip:refresh CLASS=Spree::Image`

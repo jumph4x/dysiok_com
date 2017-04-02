@@ -12,12 +12,9 @@
     <%= render partial: 'spree/shared/google_analytics.js' %>
     <%= render partial: 'spree/shared/header' %>
 
-    <div class="row expanded" >
-      <%= breadcrumbs(@taxon) %>
-
       <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
 
-      <div id="content" class="<%= !content_for?(:sidebar) ? "small-12" : "small-8 medium-9 " %> columns" data-hook>
+      <div id="content">
         <%= flash_messages %>
         <%= yield %>
       </div>

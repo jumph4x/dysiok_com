@@ -1,8 +1,14 @@
 .top-bar
   padding: 2rem 0.5rem
-  background: #fefefe url(/assets/dysiok-lighter-v2.png) no-repeat center center
   border-bottom: 1px solid #eee
-  box-shadow: 0 0 20px #ddd
+  box-shadow: 0 0 20px rgba(0,0,0,0.3)
+  background-color: #fefefe
+  @media screen and (min-width: 64em)
+    background: #fefefe url(/assets/dysiok-lighter-v2.png) no-repeat center center
+    opacity: 0.8
+    position: absolute
+    width: 100%
+    z-index: 50
   ul
     background: transparent
     a
@@ -15,6 +21,12 @@ h1
   margin-bottom: 2rem
   margin-top: 3rem
 
+#content
+  @media screen and (min-width: 64em)
+    padding-top: 6.4rem
+#product-details
+  #content
+    padding-top: 0
 .product-cell
   max-width: 512px
   display: block
@@ -36,6 +48,8 @@ h1
     font-size: 5rem
     line-height: 3rem
     margin: 0
+    @media screen and (min-width: 64em)
+      padding-top: 6.7rem
 
 .image-preview
   margin: 1.5rem

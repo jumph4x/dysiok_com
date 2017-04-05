@@ -2,16 +2,18 @@
 
 <div data-hook="product_show" class="row expanded collapse" itemscope itemtype="https://schema.org/Product">
 
-  <div class="image-detail" style="background-image: url(<%= @product.images.first.attachment.url(:large)-%>)">
-    <%= content_tag(:h1, truncate(@product.name, length: 50), class: 'info', itemprop: "name", title: @product.name) %>
-  </div>
-
-
   <div id="cart-form" data-hook="cart_form">
     <%= render partial: 'cart_form' %>
   </div>
 
-  <div id="taxon-crumbs" class=" five " data-hook="product_taxons">
+  <%- if @product.images.first -%>
+    <div class="image-detail" style="background-image: url(<%= @product.images.first.attachment.url(:large)-%>)">
+      <%= content_tag(:h1, truncate(@product.name, length: 50), class: 'info', itemprop: "name", title: @product.name) %>
+    </div>
+  <%- end -%>
+
+
+  <div id="taxon-crumbs" class="text-center" data-hook="product_taxons">
     <%= render partial: 'taxons' %>
   </div>
 </div>

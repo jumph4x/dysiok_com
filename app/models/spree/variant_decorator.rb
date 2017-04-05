@@ -23,7 +23,7 @@ module Spree
     end
 
     def padded_price price
-      price * 1.25
+      price * 1.4
     end
 
   private
@@ -35,7 +35,7 @@ module Spree
 
     def set_price
       return true if is_master?
-      self.price = determine_price(size)
+      self.price = padded_price(determine_price(size))
     end
   end
 end

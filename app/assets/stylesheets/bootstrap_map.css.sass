@@ -5,3 +5,60 @@
     width: 50%
   @media screen and (min-width: 64em)
     width: 25%
+
+.list-group
+  list-style: none
+
+.btn
+  @extend .button
+
+.alert,
+[data-hook='cart_container'],
+#order_summary
+  @extend .small-12
+  @extend .medium-8
+  @extend .large-6
+  @extend .columns
+  float: none
+  margin-left: auto
+  margin-right: auto
+
+.alert
+  margin-top: 1rem
+  margin-bottom: 1rem
+
+.alt
+  font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif
+
+.progress-steps
+  @extend .breadcrumbs
+  background: rgba(0,0,0,0.5)
+  padding: 0.5rem 2rem
+  li
+    font-size: 1rem
+  a:not([href])
+    color: black
+    &:hover
+      text-decoration: none
+      cursor: text
+  .active
+    a:not([href])
+      color: white
+#payment-methods
+  list-style: none
+#order_summary
+  legend
+    display: none
+  .col-md-3.col-sm-3.col-xs-6
+    @extend .small-12
+    @extend .medium-6
+    @extend .columns
+    margin-bottom: 2rem
+#page_content
+  @extend .columns
+  @extend .small-12
+  @extend .medium-10
+  @extend .medium-offset-1
+  @extend .large-8
+  @extend .large-offset-2
+  @extend .end

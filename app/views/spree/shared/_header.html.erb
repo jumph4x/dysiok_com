@@ -7,7 +7,7 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li><a href="/" title="Photography by Dysiok">Dysiok</a></li>
-      <%- Spree::Taxonomy.first.root.children.each do |child| -%>
+      <%- Spree::Taxonomy.first && Spree::Taxonomy.first.root.children.each do |child| -%>
       <li>
         <a href="/t/<%= child.permalink-%>"><%= child.name -%></a>
         <%- if child.children.size > 0 -%>

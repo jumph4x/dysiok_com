@@ -1,10 +1,15 @@
 // user_sessions/new
 .col-md-6.col-md-offset-3
-  margin: 0 auto
-  @media screen and (min-width: 40em)
-    width: 50%
-  @media screen and (min-width: 64em)
-    width: 25%
+  @extend .columns
+  @extend .medium-6
+  @extend .medium-offset-3
+  @extend .large-4
+  @extend .large-offset-4
+  //margin: 0 auto
+  //@media screen and (min-width: 40em)
+  //  width: 50%
+  //@media screen and (min-width: 64em)
+  //  width: 25%
 
 .list-group
   list-style: none
@@ -62,3 +67,5 @@
   @extend .large-8
   @extend .large-offset-2
   @extend .end
+.panel
+  margin-top: 5rem

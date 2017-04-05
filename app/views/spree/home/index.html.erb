@@ -1,0 +1,12 @@
+<% @body_id = 'home-page' %>
+<% product = random_product %>
+
+<div class="row expanded collapse" >
+
+  <%- if product -%>
+    <div class="image-detail" style="background-image: url(<%= product.images.first.attachment.url(:large)-%>)">
+      <h1 class="info">Like this random photo?<br/><a class="homepage-cta" href="<%= product_path(product)-%>">Put it on your wall</a>.</h1>
+    </div>
+  <%- end -%>
+
+</div>

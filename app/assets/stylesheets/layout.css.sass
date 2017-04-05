@@ -4,7 +4,7 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.3)
   background-color: #fefefe
   @media screen and (min-width: 64em)
-    background: #fefefe url(/assets/dysiok-lighter-v2.png) no-repeat center center
+    background: #fefefe url(/assets/dysiok-v2.png) no-repeat center center
     opacity: 0.8
     position: absolute
     width: 100%
@@ -24,7 +24,7 @@ h1
 #content
   @media screen and (min-width: 64em)
     padding-top: 6.4rem
-#product-details
+#product-details, #home-page
   #content
     padding-top: 0
 .product-cell
@@ -45,11 +45,28 @@ h1
     font-weight: bold
     color: white
     text-align: left
-    font-size: 5rem
-    line-height: 3rem
     margin: 0
+    @media screen and (max-width: 39.9375em)
+      line-height: 2rem
+      font-size: 2rem
+      padding: 1rem 0.5rem
+    @media screen and (min-width: 40em) and (max-width: 63.9375em)
+      line-height: 2.5rem
+      font-size: 3rem
+      padding: 2rem 1rem
     @media screen and (min-width: 64em)
+      line-height: 3.5rem
+      font-size: 5rem
       padding-top: 6.7rem
+#home-page
+  .image-detail
+    padding: 23% 0
+    .info
+      background: rgba(0,0,0,0.5)
+      @media screen and (max-width: 39.9375em)
+        padding: 1rem 0.5rem
+      @media screen and (min-width: 64em)
+        padding: 3rem 2rem
 
 .image-preview
   margin: 1.5rem
@@ -70,3 +87,9 @@ h1
   &:hover
     .info
       opacity: 1
+
+.homepage-cta
+  color: rgb(222,255,0)
+  &:hover
+    color: rgb(222,255,0)
+    text-decoration: underline

@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170405112939) do
+ActiveRecord::Schema.define(version: 20170406010831) do
+
+  create_table "attachments", force: :cascade do |t|
+    t.integer "spree_asset_id"
+    t.string  "style"
+    t.binary  "file_contents"
+  end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false

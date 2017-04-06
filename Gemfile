@@ -33,6 +33,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "paperclip_database", :git => "git://github.com/pwnall/paperclip_database.git", :branch => "rails5"
+gem 'trim_blobs'
+
 gem 'spree'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: 'master'
 

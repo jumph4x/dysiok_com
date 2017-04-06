@@ -7,7 +7,7 @@ module Spree
       def set_defaults
         product = load_resource
         product.available_on = "2017/01/01"
-        product.price = 25
+        product.price = 35
         product.shipping_category = ShippingCategory.first
       end
 

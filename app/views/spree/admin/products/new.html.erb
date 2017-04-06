@@ -18,7 +18,7 @@
 			</div>
 
       <% unless @product.has_variants? %>
-        <div data-hook="new_product_sku" class="col-md-4">
+        <div data-hook="new_product_sku" class="col-md-4 hide">
           <%= f.field_container :sku, class: ['form-group'] do %>
             <%= f.label :sku, Spree.t(:sku) %>
             <%= f.text_field :sku, size: 16, class: 'form-control' %>
@@ -86,7 +86,7 @@
         <% end %>
       </div>
 
-      <div  class="col-md-4">
+      <div  class="col-md-12">
         <%= label_tag "Format" -%><br/>
         <a class="btn btn-success format-3x2">3:2 photo</a>
         <a class="btn btn-success format-2x1">2:1 pano</a>

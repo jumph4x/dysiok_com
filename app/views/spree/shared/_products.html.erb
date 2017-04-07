@@ -25,7 +25,7 @@
           <div class="panel-body product-body">
             <%= link_to url, itemprop: "url", class: 'product-cell' do %>
               <div class="image-preview" style="background-image: url(<%= product.image && product.image.attachment.url(:product)-%>)">
-                <%= content_tag(:div, truncate(product.name, length: 50), class: 'info', itemprop: "name", title: product.name) %>
+                <%= content_tag(:div, truncate(product.name, length: 50), class: 'info alt', itemprop: "name", title: product.name) %>
               </div>
             <% end %>
           </div>

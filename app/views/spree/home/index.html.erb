@@ -3,8 +3,8 @@
 
 <div class="row expanded collapse" >
 
-  <%- if product -%>
-    <div class="image-detail" style="background-image: url(<%= product.images.first.attachment.url(:large)-%>)">
+  <%- if product && product.image -%>
+    <div class="image-detail" style="background-image: url(<%= product.image.attachment.url(:large)-%>)">
       <h1 class="info alt">Like this photo?<br/><a class="homepage-cta" href="<%= product_path(product)-%>">Put it on your wall</a>.</h1>
     </div>
   <%- end -%>

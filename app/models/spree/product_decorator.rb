@@ -7,5 +7,9 @@ module Spree
 
       self.sku = self.name.parameterize.upcase
     end
+
+    def image
+      images[0]
+    end
   end
 end
